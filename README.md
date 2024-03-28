@@ -1,4 +1,4 @@
-# Front-end Profolio
+# Front-end WebDev Portfolio
 
 Projects from Meta Front-End Developer course on Coursera
 
