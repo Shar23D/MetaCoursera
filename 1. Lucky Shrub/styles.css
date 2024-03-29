@@ -1,0 +1,46 @@
+:root {
+    --primary-color: #B6E7B9;
+    --secondary-color: ;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#header {
+    background-color: var(--primary-color);
+    display: grid;
+    grid-template-columns: auto auto;
+
+}
+
+#top-logo {
+    height: 5rem;
+    margin: 10px;
+}
+
+#top-nav {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-around;
+}
+
+#top-nav ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+#top-nav li {
+    float: left;
+    padding: 1rem;
+    margin: auto;
+}
+
+#top-nav a {
+    text-decoration: none;
+    text-align: center;
+
+}
