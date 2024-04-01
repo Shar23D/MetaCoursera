@@ -3,6 +3,7 @@
     --secondary-color: #E9DAF0;
     --tertiary-color: #DAE1F0;
     --primary-font: cursive;
+    --secondary-font: American Typewriter;
 }
 
 * {
@@ -11,43 +12,43 @@
     box-sizing: border-box;
 }
 
-
-main {
-    margin: 0 2rem 0.5rem 2rem;
-    padding: 1rem 0.25rem;
-    background-image: url(LuckyShrubLogo-green.png);
+html {
+    background-image: url(https://i.imgur.com/zZltUtS.jpeg);
     background-origin: border-box;
-    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+}
 
+body {
+    position: relative;
+    padding-bottom: 5rem;
+    min-height: 100vh;
 }
 
 #header,
 #footer {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color, #E1F0DA);
     padding: 0.5rem;
     width: 100%;
     max-height: 100px;
-    min-width: 375px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #header {
-    display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-between;
-    align-items: center;
     row-gap: 1rem;
     font-size: 1.2rem;
     position: fixed;
     top: 0;
+    z-index: 1;
 }
-
 
 #top-logo,
 #bottom-logo {
     width: 2rem;
+    margin-left: 5px;
 }
 
 #top-nav ul {
@@ -68,62 +69,95 @@ main {
 }
 
 #top-nav a:hover {
-    background-color: var(--tertiary-color);
+    background-color: var(--tertiary-color, #DAE1F0);
     border-radius: 10px;
 }
 
 main {
     margin-top: 5.5rem;
+    display: grid;
+    padding-bottom: 2.5rem;
+    row-gap: 1rem;
+    opacity: 0.85;
+    padding: 1rem 0.25rem;
+    font-family: var(--secondary-font, serif);
+   
+}
+
+section {
+    margin: 15px;
 }
 
 #promotionSection {
-    border: 3px solid var(--secondary-color);
+    border: 3px solid var(--secondary-color, #E9DAF0);
     border-radius: 10px;
-    margin: 5px;
-    padding: 10px;
-    background-color: rgba(from var(--tertiary-color) / 0.5);
-    height: 25rem;
+    background-color: var(--tertiary-color, #DAE1F0);
+    padding: 5px;
 }
 
 #promotionTitle {
     font-family: var(--primary-font);
+    font-size: 3rem;
 }
 
 #promotionInfo {
-    font-size: 1rem;
-
+    font-size: 1.5rem;
 }
 
 #disclaimer {
     font-size: 12px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 #articles {
     display: flex;
-    flex: 0 1 auto;
+    gap: 1rem;
 }
 
 article {
-    border: 3px solid var(--secondary-color);
+    border: 3px solid var(--secondary-color, #E9DAF0);
     border-radius: 10px;
-    margin: 5px;
-    padding: 5px;
-    background-color: var(--tertiary-color);
+    background-color: var(--tertiary-color, #DAE1F0);
     text-align: center;
+    flex: 1;
+    padding: 5px;
 }
 
 article h3 {
     padding: 0.5rem 0;
-    font-family: var(--primary-font);
+    font-family: var(--primary-font, Apple Chancery);
+    font-size: 1.8rem;
 }
 
 .article-img {
-    width: 2.1rem;
-    border: 3px solid var(--primary-color);
+    width: 5rem;
+    border: 3px solid var(--primary-color, #E1F0DA);
     padding: 3px;
+}
+
+blockquote p::before {
+    content: '\201C';
+}
+
+blockquote p::after {
+    content: '\201D';
+}
+
+blockquote p {
+  padding: 5px;
+  background: #eee;
+  border-radius: 5px;
 }
 
 #footer {
     font-size: 0.85rem;
+    position: absolute;
     bottom: 0;
+}
+
+#copyright,
+#top-nav {
+    margin-right: 5px;
 }
