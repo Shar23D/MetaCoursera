@@ -125,11 +125,6 @@ section {
     object-fit: cover;
     border-radius: 10px;
   }
-  
-  /* .nursery::after {
-    content: "";
-    width: 350px;
-  } */
 
 #disclaimer {
     text-align: right;
@@ -190,4 +185,10 @@ section p {
 
 #bottom-logo {
     width: 2rem;;
+}
+
+@media screen and (max-width: 600px) {
+    main{
+    overflow: scroll;
+    }
 }
